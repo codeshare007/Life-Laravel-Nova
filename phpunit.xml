@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_KEY" value="base64:ugqSaFOZ/4evX3j7Trr4WS85YnE0oZ3F8ENenw4weRf="/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="APP_DEBUG" value="false"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="MAIL_DRIVER" value="log"/>
+        <env name="SCOUT_DRIVER" value="null"/>
+        <env name="TNTSEARCH_FUZZINESS" value="true"/>
+        <env name="FILESYSTEM_DRIVER" value="public"/>
+
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_CONNECTION_EN" value="sqlite"/>
+        <env name="DB_CONNECTION_ES" value="sqlite_es"/>
+        <env name="DB_CONNECTION_PT" value="sqlite_pt"/>
+        <env name="DB_CONNECTION_JA" value="sqlite_ja"/>
+
+        <env name="DB_DATABASE" value=":memory:"/>
+        <env name="DB_DATABASE_ES" value=":memory:"/>
+        <env name="DB_DATABASE_PT" value=":memory:"/>
+        <env name="DB_DATABASE_JA" value=":memory:"/>
+        
+        <env name="ANONYMOUS_USER_ID" value="0"/>
+        
+        <env name="APPLE_API_PASSWORD" value="fake-password"/>
+        <env name="KLAVIYO_PUBLIC_KEY" value=""/>
+    </php>
+</phpunit>

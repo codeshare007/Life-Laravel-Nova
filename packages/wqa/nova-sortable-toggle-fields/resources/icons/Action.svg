@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Action</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.44852814,11.6 L16.0242641,18.1757359 C16.2585786,18.4100505 16.2585786,18.7899495 16.0242641,19.0242641 C15.7899495,19.2585786 15.4100505,19.2585786 15.1757359,19.0242641 L8.17573593,12.0242641 C7.94142136,11.7899495 7.94142136,11.4100505 8.17573593,11.1757359 L15.1757359,4.17573593 C15.4100505,3.94142136 15.7899495,3.94142136 16.0242641,4.17573593 C16.2585786,4.41005051 16.2585786,4.78994949 16.0242641,5.02426407 L9.44852814,11.6 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Action" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#979797" fill-rule="nonzero" transform="translate(12.100000, 11.600000) scale(-1, 1) translate(-12.100000, -11.600000) " xlink:href="#path-1"></use>
+        <g id="Colour/Primary-Grey" mask="url(#mask-2)" fill="#6C798B">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,120 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "test": "jest",
+        "watch:test": "jest --watch",
+        "build-analytics": "cd nova-components/Analytics && npm run dev",
+        "build-analytics-prod": "cd nova-components/Analytics && npm run prod",
+        "build-BodySystems": "cd nova-components/BodySystems && npm run dev",
+        "build-BodySystems-prod": "cd nova-components/BodySystems && npm run prod",
+        "build-Cms": "cd nova-components/Cms && npm run dev",
+        "build-Cms-prod": "cd nova-components/Cms && npm run prod",
+        "build-Recipes": "cd nova-components/Recipes && npm run dev",
+        "build-Recipes-prod": "cd nova-components/Recipes && npm run prod",
+        "build-Solutions": "cd nova-components/Solutions && npm run dev",
+        "build-Solutions-prod": "cd nova-components/Solutions && npm run prod",
+        "build-Users": "cd nova-components/Users && npm run dev",
+        "build-Users-prod": "cd nova-components/Users && npm run prod",
+        "build-global-status": "cd nova-components/GlobalStatus && npm run dev",
+        "build-global-status-prod": "cd nova-components/GlobalStatus && npm run prod",
+        "build-link-field": "cd nova-components/LinkField && npm run dev",
+        "build-link-field-prod": "cd nova-components/LinkField && npm run prod",
+        "build-uses-icons": "cd nova-components/UsesIcons && npm run dev",
+        "build-uses-icons-prod": "cd nova-components/UsesIcons && npm run prod",
+        "build-card-preview-tool": "cd nova-components/CardPreviewTool && npm run dev",
+        "build-card-preview-tool-prod": "cd nova-components/CardPreviewTool && npm run prod",
+        "build-ugc-tool": "cd nova-components/UgcTool && npm run dev",
+        "build-ugc-tool-prod": "cd nova-components/UgcTool && npm run prod",
+        "build-SeedDownload": "cd nova-components/SeedDownload && npm run dev",
+        "build-SeedDownload-prod": "cd nova-components/SeedDownload && npm run prod",
+        "build-UserDebug": "cd nova-components/UserDebug && npm run dev",
+        "build-UserDebug-prod": "cd nova-components/UserDebug && npm run prod",
+        "build-language-switcher": "cd nova-components/LanguageSwitcher && npm run dev",
+        "build-language-switcher-prod": "cd nova-components/LanguageSwitcher && npm run prod",
+        "build-regions": "cd nova-components/Regions && npm run dev",
+        "build-regions-prod": "cd nova-components/Regions && npm run prod",
+        "build-deep-link-tool": "cd nova-components/DeepLinkTool && npm run dev",
+        "build-deep-link-tool-prod": "cd nova-components/DeepLinkTool && npm run prod"
+    },
+    "devDependencies": {
+        "@vue/test-utils": "^1.0.0-beta.16",
+        "axios": "^0.17",
+        "babel-helper-vue-jsx-merge-props": "^2.0.3",
+        "babel-jest": "^23.0.1",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-syntax-jsx": "^6.18.0",
+        "babel-plugin-transform-vue-jsx": "^3.7.0",
+        "babel-preset-env": "^1.6.1",
+        "cross-env": "^5.0.0",
+        "flush-promises": "^1.0.0",
+        "jest": "^23.0.1",
+        "jest-mock-axios": "^2.1.11",
+        "jest-serializer-vue": "^2.0.0",
+        "jquery": "^3.2.0",
+        "laravel-mix": "^1.0",
+        "lodash": "^4.17.0",
+        "tailwindcss": "^0.6.0",
+        "vue": "^2.5.0",
+        "vue-jest": "^2.6.0",
+        "vue-router": "^3.0.1",
+        "vue-server-renderer": "^2.5.16"
+    },
+    "dependencies": {
+        "chartist": "^0.11.0",
+        "chartist-plugin-tooltips": "^0.0.17",
+        "codemirror": "^5.42.0",
+        "flatpickr": "^4.4.4",
+        "form-backend-validation": "^2.3.3",
+        "inflector-js": "^1.0.1",
+        "laravel-nova": "^1.0.5",
+        "markdown-it": "^8.4.1",
+        "marked": "^0.3.19",
+        "moment": "^2.22.2",
+        "moment-timezone": "^0.5.21",
+        "nova-watcher": "^1.0.1",
+        "numeral": "^2.0.6",
+        "pikaday": "^1.7.0",
+        "places.js": "^1.14.0",
+        "popper.js": "^1.14.5",
+        "portal-vue": "^1.3.0",
+        "trix": "^1.0.0",
+        "vue-async-computed": "^3.5.0",
+        "vue-clickaway": "^2.1.0",
+        "vue-toasted": "^1.1.24",
+        "vuex": "^3.0.1"
+    },
+    "jest": {
+        "setupFiles": [
+            "./resources/js/test-setup/bootstrap.js"
+        ],
+        "testRegex": "(/resources/js/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "vue"
+        ],
+        "transform": {
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+            ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+        },
+        "snapshotSerializers": [
+            "<rootDir>/node_modules/jest-serializer-vue"
+        ],
+        "collectCoverage": false,
+        "collectCoverageFrom": [
+            "**/*.{js,vue}",
+            "!**/node_modules/**"
+        ],
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/resources/js/$1",
+            "\\.(css|jpg|png)$": "<rootDir>/resources/js/util/empty.js"
+        }
+    }
+}

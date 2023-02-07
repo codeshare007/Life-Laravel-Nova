@@ -1,0 +1,53 @@
+{
+  "name": "wqa/nova-extend-fields",
+  "description": "A nova extend fields",
+  "license": "MIT",
+  "keywords": [
+    "nova",
+    "extend",
+    "fields"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Adam Lee",
+      "email": "adam.lee@wearewqa.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.7.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wqa\\NovaExtendFields\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wqa\\NovaExtendFields\\Tests\\": "tests"
+    },
+    "files": [
+      "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+    ]
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wqa\\NovaExtendFields\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

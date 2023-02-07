@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Close-Background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,11.4190327 L16.2987104,7.12032228 C16.4591401,6.95989257 16.719248,6.95989257 16.8796777,7.12032228 C17.0401074,7.28075198 17.0401074,7.54085991 16.8796777,7.70128961 L12.5809673,12 L16.8796777,16.2987104 C17.0401074,16.4591401 17.0401074,16.719248 16.8796777,16.8796777 C16.719248,17.0401074 16.4591401,17.0401074 16.2987104,16.8796777 L12,12.5809673 L7.70128961,16.8796777 C7.54085991,17.0401074 7.28075198,17.0401074 7.12032228,16.8796777 C6.95989257,16.719248 6.95989257,16.4591401 7.12032228,16.2987104 L11.4190327,12 L7.12032228,7.70128961 C6.95989257,7.54085991 6.95989257,7.28075198 7.12032228,7.12032228 C7.28075198,6.95989257 7.54085991,6.95989257 7.70128961,7.12032228 L12,11.4190327 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Close-Background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#979797" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Colour/Primary-Grey" mask="url(#mask-2)" fill="#6C798B">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

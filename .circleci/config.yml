@@ -1,0 +1,96 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: wearewqa/essential-life-api:2.0
+        environment:
+          - CI: true
+
+    steps:
+      - checkout
+
+      - run:
+          name: Update Composer
+          command: sudo composer self-update
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "composer.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v2-dependencies-
+      - run:
+          name: Add Composer Auth File
+          command: echo "${COMPOSER_AUTH}" > auth.json
+      - run:
+          name: Install Composer Dependencies
+          command: composer install -n --prefer-dist
+      - save_cache:
+          key: v2-dependencies-{{ checksum "composer.lock" }}
+          paths:
+            - ./vendor
+
+      - run:
+          name: Setup Environment
+          command: |
+            php artisan passport:keys
+            touch ./storage/logs/laravel.log
+
+      - run:
+          name: Run Unit Tests
+          command: |
+            mkdir -p ./logs/phpunit
+            vendor/bin/phpunit -d memory_limit=512M --log-junit logs/phpunit/junit.xml --testdox-html logs/phpunit/testdox.html
+
+      - store_artifacts:
+          path: ./logs/phpunit
+          destination: phpunit
+
+      - store_test_results:
+          path: ./logs/phpunit
+
+      - store_artifacts:
+          path: ./storage/logs
+          destination: laravel
+
+  deploy-staging:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "6b:ee:d4:a3:8c:4c:52:08:eb:42:04:f0:92:75:df:f4"
+      - run:
+          name: Trigger staging deploy script
+          command: ssh root@159.65.94.8 "cd /var/www/html/essential-life-api/ && git pull && sh deploy.sh"
+
+  deploy-production:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "51:84:0f:94:b8:f0:f3:2b:15:11:22:09:05:36:ab:e8"
+      - run:
+          name: Trigger production deploy script
+          command: ssh wqa_admin@ec2-18-222-184-142.us-east-2.compute.amazonaws.com "cd /var/www/html/ && git pull && sh deploy.sh"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy-staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+      - deploy-production:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

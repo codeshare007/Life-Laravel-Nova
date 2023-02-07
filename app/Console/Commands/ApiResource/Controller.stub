@@ -1,0 +1,85 @@
+<?php
+
+namespace {{controllerFolder}};
+
+use App\Http\Controllers\Controller;
+use App\{{modelName}};
+use Spatie\QueryBuilder\QueryBuilder;
+use App\Enums\ApiResource;
+
+class {{modelName}}Controller extends Controller
+{
+    /**
+     * @var {{modelName}}
+     */
+    private ${{lcModelName}};
+
+    /**
+     * @var QueryBuilder
+     */
+    private $queryBuilder;
+
+    /**
+     * All loadable relationships
+     * @var array
+     */
+    private $allowedIncludes = [];
+
+    /**
+     * Default sort attribute
+     * @var string
+     */
+    private $defaultSort = 'name';
+
+    /**
+     * All sort attribute
+     * @var array
+     */
+    private $allowedSorts = [
+        'name'
+    ];
+
+    /**
+     * {{modelName}}Controller constructor.
+     *
+     * @param {{modelName}} {{lcModelName}}
+     */
+    public function __construct({{modelName}} ${{lcModelName}})
+    {
+        $this->{{lcModelName}} = ${{lcModelName}};
+        $this->queryBuilder = QueryBuilder::for({{modelName}}::class);
+    }
+
+    /**
+     * Fetch all {{lcModelName}} with given relationships
+     *
+     * @return \Illuminate\Database\Eloquent\Collection|QueryBuilder[]
+     */
+    public function index()
+    {
+        $query = $this->queryBuilder->allowedIncludes(
+            $this->allowedIncludes
+        )->allowedSorts($this->allowedSorts)
+            ->defaultSort($this->defaultSort)
+            ->get();
+
+        return api_resource(ApiResource::{{modelName}})->collection($query);
+    }
+
+    /**
+     * Fetch individual {{lcModelName}}
+     *
+     * @param $id
+     * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|QueryBuilder|QueryBuilder[]|null
+     */
+    public function show($id)
+    {
+        $query = $this->queryBuilder->allowedIncludes(
+            $this->allowedIncludes
+        )->allowedSorts($this->allowedSorts)
+            ->defaultSort($this->defaultSort)
+            ->find($id);
+
+        return api_resource(ApiResource::{{modelName}})->make($query);
+    }
+}

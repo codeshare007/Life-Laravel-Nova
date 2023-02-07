@@ -1,0 +1,54 @@
+{
+  "name": "wqa/nova-sortable-toggle-fields",
+  "description": "A nova sortable toggle fields",
+  "license": "MIT",
+  "keywords": [
+    "nova",
+    "sortable",
+    "toggle",
+    "fields"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Adam Lee",
+      "email": "adam.lee@wearewqa.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.7.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wqa\\NovaSortableToggleFields\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wqa\\NovaSortableToggleFields\\Tests\\": "tests"
+    },
+    "files": [
+      "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+    ]
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wqa\\NovaSortableToggleFields\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

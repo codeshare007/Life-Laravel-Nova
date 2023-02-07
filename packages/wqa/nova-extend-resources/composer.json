@@ -1,0 +1,53 @@
+{
+  "name": "wqa/nova-extend-resources",
+  "description": "A nova extend resources",
+  "license": "MIT",
+  "keywords": [
+    "nova",
+    "extend",
+    "resources"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Adam Lee",
+      "email": "adam.lee@wearewqa.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.7.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wqa\\NovaExtendResources\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wqa\\NovaExtendResources\\Tests\\": "tests"
+    },
+    "files": [
+      "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+    ]
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wqa\\NovaExtendResources\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

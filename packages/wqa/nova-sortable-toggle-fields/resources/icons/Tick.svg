@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.7584985,5.17573593 C20.992813,4.94142136 21.372712,4.94142136 21.6070266,5.17573593 C21.8413412,5.41005051 21.8413412,5.78994949 21.6070266,6.02426407 L10.1070266,17.5242641 C9.87271202,17.7585786 9.49281304,17.7585786 9.25849846,17.5242641 L3.17573593,11.4415015 C2.94142136,11.207187 2.94142136,10.827288 3.17573593,10.5929734 C3.41005051,10.3586588 3.78994949,10.3586588 4.02426407,10.5929734 L9.68276253,16.2514719 L20.7584985,5.17573593 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Tick" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Line-5" fill="#979797" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Colour/Primary-Grey" mask="url(#mask-2)" fill="#6C798B">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

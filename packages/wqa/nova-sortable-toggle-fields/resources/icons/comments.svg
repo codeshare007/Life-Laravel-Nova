@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Comments</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1.91999037,22.1374823 L7.23317034,20.7393408 L7.43977492,20.8482426 C8.89388058,21.6147058 10.512056,22.0208511 12.1895745,22.0208511 C17.8286292,22.0208511 22.4,17.4494802 22.4,11.8104255 C22.4,6.17137085 17.8286292,1.6 12.1895745,1.6 C6.55045926,1.6 1.97917492,6.17142107 1.97961702,11.8104255 C1.97961702,13.6683549 2.4776612,15.4525993 3.40781027,17.0179721 L3.54799038,17.253885 L1.91999037,22.1374823 Z M0.0800096285,23.8625177 L2.23741007,17.3908502 C1.28718892,15.6999335 0.779617021,13.7914917 0.779617023,11.8104726 C0.779122962,5.50872368 5.88769385,0.4 12.1895745,0.4 C18.4913708,0.4 23.6,5.50862915 23.6,11.8104255 C23.6,18.1122219 18.4913708,23.2208511 12.1895745,23.2208511 C10.3960082,23.2208511 8.66096073,22.8046745 7.09031673,22.0177842 L0.0800096285,23.8625177 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Comments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#2D53DA" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Colour/Primary-Grey" mask="url(#mask-2)" fill="#6C798B">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

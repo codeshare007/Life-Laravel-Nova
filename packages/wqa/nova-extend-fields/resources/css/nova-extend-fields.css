@@ -1,0 +1,119 @@
+@tailwind preflight;
+
+/* CHECKBOX TOGGLE SWITCH */
+.form-switch {
+  @apply relative select-none w-12 mr-2 leading-normal;
+}
+.form-switch-checkbox {
+  @apply hidden;
+}
+.form-switch-label {
+  @apply block overflow-hidden cursor-pointer bg-white border rounded-full h-6  shadow-inner;
+
+  transition: background-color 0.2s ease-in;
+}
+.form-switch-label:before {
+  @apply absolute block bg-white pin-y w-6 border rounded-full -ml-1;
+
+  right: 50%;
+  content: "";
+  transition: all 0.2s ease-in;
+}
+.form-switch-checkbox:checked + .form-switch-label,
+.form-switch-checkbox:checked + .form-switch-label:before {
+
+}
+.form-switch-checkbox:checked + .form-switch-label {
+  @apply bg-green shadow-none;
+}
+.form-switch-checkbox:checked + .form-switch-label:before {
+  @apply pin-r;
+}
+
+@tailwind utilities;
+
+.btn-success {
+  @apply .bg-success .text-white;
+}
+
+.table tr.sortable-ghost {
+  background-color: #f3f3f3;
+}
+
+.editMode .w-full {
+  width: 100%!important;
+}
+
+.editMode .w-1\/2 {
+  width: 100%;
+}
+
+.editMode .flex > div {
+  padding: 0;
+}
+
+.editMode .label-text-field,
+.editMode .label-textarea-field,
+.editMode .label-boolean-field {
+  display: none;
+}
+
+.editMode #is_featured .checkbox {
+  margin: auto;
+}
+
+.editMode textarea {
+  margin: 20px 0;
+  min-height: 65px;
+  border: 1px solid #EEE;
+}
+
+.editMode th.useable_name {
+  width: 10%
+}
+
+.editMode th.name {
+  width: 20%;
+}
+
+.editMode th.uses_icons {
+  width: 15%;
+}
+
+.editMode .td-uses_icons,
+.editMode th.uses_icons {
+  text-align: center!important;
+}
+
+table[singular-name="Remedy"] .short_description {
+  width: 350px;
+}
+
+.v-select.single {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.v-select.single .dropdown-toggle {
+  line-height: 40px;
+  height: 40px;
+}
+
+.v-select.single .dropdown-menu {
+  top: 52px;
+}
+
+.v-select.single .form-control {
+  position: absolute!important;
+  width: 100%!important;
+  top: 0!important;
+}
+
+[data-testid="confirm-action-modal"] .action {
+  padding: 20px;
+}
+
+[data-testid="resource-table"] .content {
+  min-width: auto;
+  width: auto;
+}
